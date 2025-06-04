@@ -25,6 +25,19 @@ while True:
     else:
         print("Por favor de ingresar una apellido valido sin nuneros\n")
         
+ #validamos edad
+while True:
+    try:
+        edad = int(input("Por favor ingrsa tu edad.\n"))
+        if edad > 0:
+            break
+        else:
+            print("La edad debe de ser mayor a cero.\n")
+    except ValueError:
+        print("Por favor ingrese un valor numerico.\n")
+    
+      
+        
 #mostramos nombre completo
 nombre_completo = nombre + " " + apellido_paterno + " " + apellido_materno
 print(f"Hola {nombre_completo}\n")
@@ -57,7 +70,7 @@ imc = peso / (estatura **2)
 
 #mostramos el resultado al usuario
 
-print(f"{nombre_completo}, tu IMC es el siguien.\n")
+print(f"Edad {edad}, {nombre_completo}, tu IMC es el siguien.\n")
 print(f"{imc:.2f}")
         
         
