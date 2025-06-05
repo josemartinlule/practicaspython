@@ -1,5 +1,6 @@
 print("Hola vamos a medir tu IMC\n")
 
+
 #validamos el nombre
 
 while True:
@@ -28,7 +29,7 @@ while True:
  #validamos edad
 while True:
     try:
-        edad = int(input("Por favor ingrsa tu edad.\n"))
+        edad = int(input("Por favor ingresa tu edad.\n"))
         if edad > 0:
             break
         else:
@@ -46,7 +47,7 @@ print("Me puedes ayudar con unos datos\n")
 #validamos estatura
 while True:
     try:
-        estatura = float(input("Ingresa tu estarura porfavor.\n"))
+        estatura = float(input("Ingresa tu estatura porfavor.\n"))
         if estatura > 0:
             break
         else:
@@ -66,12 +67,26 @@ while True:
         print("Por favor de ingresar un valor numerico.\n")
         
 #realizamos las operaciones
-imc = peso / (estatura **2)
+    
+imc = peso / (estatura ** 2)
+
+#evaluamos el IMC
+if imc >= 0 and imc <= 18.49:
+    mensaje = "Peso bajo"
+elif imc >= 18.50 and imc <= 24.99:
+    mensaje = "Peso normal"
+elif imc >= 25 and imc <= 29.99:
+    mensaje = "Sobrepeso"
+elif imc >= 30 and imc <= 34.99:
+    mensaje = "Obesidad leve"
+elif imc >= 35 and imc <= 39.99:
+    mensaje = "Obesidad media"
+elif imc >= 40:
+    mensaje = "Obesidad mórbida"
 
 #mostramos el resultado al usuario
-
-print(f"Edad {edad}, {nombre_completo}, tu IMC es el siguien.\n")
-print(f"{imc:.2f}")
+print(f"Edad: {edad}, {nombre_completo}, tu IMC es el siguiente:")
+print(f"{imc:.2f} - {mensaje}")
         
         
         
